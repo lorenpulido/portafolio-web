@@ -1,0 +1,283 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Karen Lorena Pulido</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            });
+        
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Toggle menu for mobile view
+            const menuButton = document.querySelector('.menu-button');
+            const navMenu = document.querySelector('.nav-menu');
+
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="imagenes/Recurso 3.png" alt="Serene Design Logo" class="logo">
+            <button class="menu-button">&#9776;</button> <!-- Menu button for mobile -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#portfolio">PORTAFOLIO</a></li>
+                    <li><a href="#photography">FOTOGRAFÍA</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#services">SERVICIOS</a></li>
+                    <li><a href="#contact">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="about-container">
+            <img src="imagenes/fotoperfil.jpg" alt="Karen Lorena Pulido" class="profile-img">
+            <div class="about-text">
+                <center><h1>SOBRE MI</h1></center>
+                <p>Karen Lorena Pulido, estudiante del SENA con el entusiasmo a seguir aprendiendo cada día más y lograr crear grandes experiencias y sitios web, una futura productora multimedia apasionada por la edición de videos, amante a la tecnología y sugerirme a nuevas experiencias, con habilidad en capturar momentos por medio de la fotografía. Las herramientas que he usado son Photoshop, illustrator y visual studio code.
+                </p>
+            </div>
+            <div class="logoAve">
+                <img src="imagenes/Recurso 10.png" alt="Logo Ave">
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <center><h1>PORTAFOLIO</h1></center>
+        <div class="portfolio-container">
+            <!-- Proyectos del portafolio -->
+            <div class="portfolio-item">
+                <img src="imagenes/proyecto1.png" alt="Proyecto 1">
+                <h3>Vitrales Digitales</h3>
+                <p>En este proyecto, exploro el arte del vitral a través de herramientas avanzadas de Photoshop. Utilizo técnicas de recorte para crear composiciones que evocan la belleza de los vitrales tradicionales, integrando imágenes y rellenos que simulan la luminosidad y la delicadeza de este arte clásico. Cada pieza es un viaje visual que transforma la percepción de la luz y el color.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="imagenes/proyecto2.png" alt="Proyecto 2">
+                <h3>Perspectivas Fotograficas</h3>
+                <p>Este proyecto se centra en la manipulación de imágenes mediante el uso de filtros en Photoshop. A través de la duplicación de fotografías, presento diferentes perspectivas de un mismo sujeto, destacando cómo la luz y el color pueden cambiar la narrativa visual. Cada imagen ofrece una nueva forma de ver y sentir, invitando al espectador a explorar múltiples realidades.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="imagenes/proyecto3.jpg" alt="Proyecto 3">
+                <h3>Paleta De Color</h3>
+                <p>En esta serie, investigo la riqueza del color a través de imágenes en monótono, duotono, tritono y cuatritono. Cada variación representa una exploración única de la paleta, demostrando cómo los tonos pueden influir en la emoción y la atmósfera de una imagen. Este proyecto invita a los espectadores a reflexionar sobre el poder del color en la comunicación visual.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="imagenes/proyecto4.png" alt="Proyecto 4">
+                <h3>Ilustraciones</h3>
+                <p>En este proyecto, presento una colección de ilustraciones creadas en Adobe Illustrator. Cada obra combina creatividad y técnica, utilizando vectores para construir imágenes vibrantes y detalladas. Desde diseños abstractos hasta ilustraciones conceptuales, este portafolio destaca la versatilidad y el potencial infinito de la ilustración digital.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="photography">
+        <center><h1>FOTOGRAFÍA</h1></center>
+        <center><p>En este espacio encontraras algunas de mis fotografías
+            inspiradas en la natuleza, la fotografía urbana, entre otras.</p></center>
+        <div class="photography-carousel">
+            <input type="radio" name="carousel" id="slide1" checked>
+            <input type="radio" name="carousel" id="slide2">
+            <input type="radio" name="carousel" id="slide3">
+            <input type="radio" name="carousel" id="slide4">
+    
+            <div class="carousel-slides">
+                <div class="carousel-slide">
+                    <img src="imagenes/foto1.jpg" alt="Fotografía 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/foto5.jpg" alt="Fotografía 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/foto7.jpeg" alt="Fotografía 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="imagenes/foto3.jpg" alt="Fotografía 4">
+                </div>
+            </div>
+    
+            <div class="carousel-indicators">
+                <label for="slide1" class="indicator"></label>
+                <label for="slide2" class="indicator"></label>
+                <label for="slide3" class="indicator"></label>
+                <label for="slide4" class="indicator"></label>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="blog">
+        <center><h2>BLOG</h2></center>
+        <div class="carousel-container">
+            <div class="carousel">
+                <article class="carousel-item">
+                    <h3>🎨 El Futuro del Diseño: ¡Explora el Mundo del Diseño 3D! 🌐</h3>
+                    <img src="imagenes/articulo1.jpeg" alt="articulo1" class="blog-imagen">
+                    <p>¿Listo para Transformar tus Ideas en Realidad?
+                        El diseño 3D está revolucionando la forma en que percibimos el mundo digital. Desde la creación de impresionantes paisajes virtuales hasta productos innovadores, el diseño 3D permite a los artistas y diseñadores dar vida a sus visiones de manera realista y envolvente. ¡Imagina tus ideas flotando en un espacio tridimensional, listas para ser exploradas desde todos los ángulos! No te quedes atrás, únete a la revolución del diseño 3D hoy mismo.
+                        🚀 ¡Descubre más sobre el diseño 3D y cómo puede transformar tu creatividad!</p>
+                </article>
+                <article class="carousel-item">
+                    <h3>📸 Captura el Mundo con un Click: La Magia de la Fotografía 🌟</h3>
+                    <img src="imagenes/articulo2.jpg" alt="articulo2" class="blog-imagen">
+                    <p>¡Inmortaliza tus Momentos con Estilo!
+                        La fotografía es más que solo apretar un botón; es capturar la esencia del momento, contar una historia sin palabras y transmitir emociones a través de una imagen. Con las herramientas y técnicas adecuadas, puedes transformar una simple foto en una obra de arte. Desde la fotografía de paisajes impresionantes hasta retratos íntimos, aprende a dominar el arte de la fotografía y deja tu huella visual en el mundo.
+                        📷 ¡Descubre los secretos detrás de una fotografía perfecta y comienza a crear tus propias obras maestras!</p>
+                </article>
+                <article class="carousel-item">
+                    <h3>Donde la Imaginación Cobra Vida</h3>
+                    <img src="imagenes/articulo3.jpeg" alt="articulo2" class="blog-imagen">
+                    <p>¡Haz que tus Ideas Cobren Vida!
+                        La animación no es solo para películas y series; es una herramienta poderosa para contar historias, explicar conceptos complejos y captar la atención de tu audiencia. Desde simples gifs hasta animaciones en 3D, la animación puede transformar cualquier idea en una experiencia visual dinámica. ¿Listo para dar el siguiente paso en tu carrera creativa? Aprende las técnicas de animación y comienza a dar vida a tus creaciones hoy mismo.
+                        🎨 ¡Descubre cómo puedes convertir tus ideas en animaciones impactantes y cautivar a tu audiencia!</p>
+                </article>
+                <article class="carousel-item">
+                    <h3>🤖 Diseño Inteligente: La Intersección de la IA y el Diseño 💡</h3>
+                    <img src="imagenes/articulo4.jpeg" alt="articulo2" class="blog-imagen">
+                    <p>¡Revoluciona tu Creatividad con la Inteligencia Artificial!
+                        La inteligencia artificial está transformando el mundo del diseño gráfico y multimedia. Desde la generación automática de contenido hasta la personalización avanzada, la IA permite a los diseñadores trabajar de manera más eficiente y creativa. Imagina tener una herramienta que entienda tus preferencias y te ayude a crear diseños impresionantes en cuestión de minutos. ¡El futuro del diseño está aquí y está impulsado por la IA!
+                        🔍 ¡Explora cómo la IA puede mejorar tu proceso creativo y llevar tus diseños al siguiente nivel!</p>
+                </article>
+                <article class="carousel-item">
+                    <h3>✏️ De los Sueños al Papel: La Magia de la Ilustración 🎨</h3>
+                    <img src="imagenes/articulo5.jpeg" alt="articulo2" class="blog-imagen">
+                    <p>¡Transforma tus Ideas en Arte!
+                        La ilustración es una forma poderosa de comunicación visual que trasciende las barreras del lenguaje. Con solo un lápiz y un papel, o una tableta gráfica, puedes crear mundos enteros, personajes inolvidables y escenas que capturan la imaginación. Ya sea que prefieras un estilo realista o algo más abstracto, la ilustración te permite expresar tu visión única y conectarte con tu audiencia de una manera profunda.
+                        🎨 ¡Descubre las técnicas y herramientas que te ayudarán a mejorar tus habilidades de ilustración y a crear obras de arte impresionantes!</p>
+                </article>
+                <!-- Añade más artículos aquí -->
+            </div>
+            <button class="carousel-control prev">❮</button>
+            <button class="carousel-control next">❯</button>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const carousel = document.querySelector('.carousel');
+                const items = document.querySelectorAll('.carousel-item');
+                const prevButton = document.querySelector('.carousel-control.prev');
+                const nextButton = document.querySelector('.carousel-control.next');
+                let index = 0;
+        
+                function updateCarousel() {
+                    const offset = -index * 100;
+                    carousel.style.transform = `translateX(${offset}%)`;
+                }
+        
+                prevButton.addEventListener('click', () => {
+                    index = (index > 0) ? index - 1 : items.length - 1;
+                    updateCarousel();
+                });
+        
+                nextButton.addEventListener('click', () => {
+                    index = (index < items.length - 1) ? index + 1 : 0;
+                    updateCarousel();
+                });
+        
+                // Optional: Auto-slide
+                setInterval(() => {
+                    nextButton.click();
+                }, 5000); // Cambia cada 5 segundos
+            });
+        </script>
+        
+    </section>
+    
+    <!-- Nueva sección Testimonios -->
+<section id="testimonials">
+    <center><h2>TESTIMONIOS</h2></center>
+    <div class="testimonials-container">
+        <div class="testimonial-item">
+            <p>"Karen tiene un ojo increíble para el diseño y una ética de trabajo excepcional. ¡Fue un placer colaborar con ella!"</p>
+            <h1>Cliente Satisfecho</h1>
+        </div>
+        <div class="testimonial-item">
+            <p>"Su creatividad y habilidad técnica han llevado mis proyectos al siguiente nivel. Altamente recomendada."</p>
+            <h1>Colaborador</h1>
+        </div>
+        <!-- Más testimonios -->
+    </div>
+</section>
+
+<section id="services">
+    <center><h2>SERVICIOS</h2></center>
+    <div class="services-container">
+        <div class="service-item">
+            <h3>Diseño Gráfico</h3>
+            <img src="imagenes/diseñografico.jpg" alt="Diseño Gráfico" class="service-img">
+            <p>El diseño gráfico es esencial para conectar a las empresas con su público objetivo, utilizando la comunicación visual para lograr objetivos específicos de manera efectiva y creativa.</p>
+        </div>
+        <div class="service-item">
+            <h3>Fotografía Profesional</h3>
+            <img src="imagenes/fotografia.png" alt="Fotografía Profesional" class="service-img">
+            <p>La fotografía profesional va más allá de simplemente tomar fotos; es un arte que combina habilidades técnicas y creativas para capturar imágenes que comunican, impactan y satisfacen las necesidades del cliente con la mayor calidad posible.</p>
+        </div>
+        <div class="service-item">
+            <h3>Edición de Video</h3>
+            <p>La edición de videos es esencial para transformar el material bruto en un producto final que no solo capte la atención, sino que también comunique el mensaje de manera efectiva y profesional.</p>
+            <video controls class="service-video">
+                <source src="videos/sonoviso.mp4" type="video/mp4">
+                Tu navegador no soporta el formato de video.
+            </video>
+        </div>
+        <div class="service-item">
+            <h3>Manual de Identidad Corporativa</h3>
+            <img src="imagenes/Recurso 9.png" alt="Manual de Identidad Corporativa" class="Ave">
+            <p>A través de una identidad bien diseñada, una empresa puede comunicar sus valores y conectar de manera efectiva con su audiencia.</p>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contactame</h3>
+            </div>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <textarea placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <footer>
+            <h1>&copy; 2024 Karen Lorena Pulido Díaz Productora Multimedía</h1>
+            <div class="social-icons">
+                <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" class="social-icon">
+                    <img src="imagenes/correo.png" alt="Correo">
+                </a>
+                <a href="https://github.com/" target="_blank" class="social-icon">
+                    <img src="imagenes/github.png" alt="GitHub">
+                </a>
+                <a href="https://www.instagram.com/lorepulido29/?hl=es-la" target="_blank" class="social-icon">
+                    <img src="imagenes/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/3142791176" target="_blank" class="social-icon">
+                    <img src="imagenes/whatsapp.png" alt="WhatsApp">
+                </a>
+            </div>
+        </footer>
+        <!-- Botón para subir al inicio -->
+        <a href="#about" class="scroll-to-top" title="Volver al inicio">&#8679;</a>    
+</body>
+</html>
